@@ -43,6 +43,24 @@ namespace ExampleOnParameterised
             Console.WriteLine("b = " + b);
         }
     }
+    class Student
+    {
+        int sid;
+        string sname;
+        int sage;
+        public Student(int sid, string sname, int sage)
+        {
+            this.sid = sid;
+            this.sname = sname;
+            this.sage = sage;
+        }
+        public void display()
+        {
+            Console.WriteLine("Student ID: " + sid);
+            Console.WriteLine("Student Name: " + sname);
+            Console.WriteLine("Student Age: " + sage);
+        }
+    }
 
     internal class Program
     {
@@ -50,6 +68,10 @@ namespace ExampleOnParameterised
         {
             myclass obj = new myclass(10,20);
             obj.display();
+            Student student = new Student(1, "John Doe", 20);
+            student.display();
+            Student student2 = new Student(2, "Jane Smith", 22);
+            student2.display();
         }
     }
 }
